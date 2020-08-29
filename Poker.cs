@@ -29,7 +29,7 @@ class Poker {
     bool continueLoop = true;
     while (continueLoop) {
       Console.WriteLine("Pick An option: ");
-      Console.WriteLine("1. How to play 2. Play");
+      Console.WriteLine("1. How to play 2. Play 3. Test");
 
       string option = Console.ReadLine();
 
@@ -38,6 +38,9 @@ class Poker {
       }
       else if (option.Equals("2")) {
         startMatch();
+      }
+      else if (option.Equals("3")) {
+        testCards();
       }
       else if (option.Equals("q")) {
         continueLoop = false;
@@ -54,7 +57,12 @@ class Poker {
   }
 
   static void startMatch(){
+    // testCards();
+  }
 
+  static void testCards() {
+    Deck cardDeck = new Deck(10);
+    cardDeck.printDeck();
   }
 }
 
