@@ -29,7 +29,7 @@ class Poker {
     bool continueLoop = true;
     while (continueLoop) {
       Console.WriteLine("Pick An option: ");
-      Console.WriteLine("1. How to play 2. Next");
+      Console.WriteLine("1. How to play 2. Play");
 
       string option = Console.ReadLine();
 
@@ -37,7 +37,7 @@ class Poker {
         howTo();
       }
       else if (option.Equals("2")) {
-        Console.WriteLine("Nah");
+        startMatch();
       }
       else if (option.Equals("q")) {
         continueLoop = false;
@@ -51,5 +51,27 @@ class Poker {
 
   static void howTo(){
     Console.WriteLine("it's poker dummi");
+  }
+
+  static void startMatch(){
+
+  }
+}
+
+class Card {
+  string suit;
+  string card;
+
+  new Card(string inputSuit, string inputCard){
+    suit = inputSuit;
+    card = inputCard;
+  }
+}
+
+class Deck {
+  Card[] currentDeck;
+
+  new Deck(int numberOfCards = 52, bool hasJokers = false) {
+    // this methoud makes a deck but only with
   }
 }
